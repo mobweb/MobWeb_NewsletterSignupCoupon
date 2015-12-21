@@ -73,7 +73,7 @@ class MobWeb_NewsletterSignupCoupon_Helper_Data extends Mage_Core_Helper_Abstrac
     public function sendCoupon($email) {
 
         // Create the coupon code
-        $coupon_code = Mage::helper('newslettersignupcoupon')->createCoupons(/*1, $email*/);
+        $coupon_code = Mage::helper('newslettersignupcoupon')->createCoupons(1, 'newsletter');
         if($coupon_code = $coupon_code[0]) {
             // Load the transactional email specified in the config
             $transactional_email_id = Mage::getStoreConfig('newsletter/newslettersignupcoupon/transactional_email_id');
