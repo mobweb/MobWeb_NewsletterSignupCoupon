@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <MobWeb_NewsletterSignupCoupon>
+            <version>0.1.0</version>
+        </MobWeb_NewsletterSignupCoupon>
+    </modules>
+    <global>
+        <models>
+            <newslettersignupcoupon>
+                <class>MobWeb_NewsletterSignupCoupon_Model</class>
+            </newslettersignupcoupon>
+            <newslettersignupcoupon_adminhtml>
+              <class>MobWeb_NewsletterSignupCoupon_Adminhtml_Model</class>
+            </newslettersignupcoupon_adminhtml>
+        </models>
+        <helpers>
+            <newslettersignupcoupon>
+                <class>MobWeb_NewsletterSignupCoupon_Helper</class>
+            </newslettersignupcoupon>
+        </helpers>
+        <events>
+            <!-- Debugging observer -->
+            <!--
+            <controller_front_init_before>
+                <observers>
+                    <newslettersignupcoupon_debugging>
+                        <class>newslettersignupcoupon/observer</class>
+                        <method>sendCoupon</method>
+                        <type>singleton</type>
+                    </newslettersignupcoupon_debugging>
+                </observers>
+            </controller_front_init_before>
+            -->
+            <newsletter_subscriber_save_commit_after>
+                <observers>
+                    <newslettersignupcoupon>
+                        <class>newslettersignupcoupon/observer</class>
+                        <method>newsletterSubscriberSaveCommitAfter</method>
+                        <type>singleton</type>
+                    </newslettersignupcoupon>
+                </observers>
+            </newsletter_subscriber_save_commit_after>
+        </events>
+    </global>
+</config>

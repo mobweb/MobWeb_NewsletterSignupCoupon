@@ -1,0 +1,10 @@
+app/code/community/MobWeb/NewsletterSignupCoupon app/code/community/MobWeb/NewsletterSignupCoupon/
+
+app/locale/de_DE/mobweb_newslettersignupcoupon.csv app/locale/de_DE/mobweb_newslettersignupcoupon.csv
+app/locale/de_DE/mobweb_newslettersignupcoupon.csv app/locale/de_CH/mobweb_newslettersignupcoupon.csv
+app/locale/de_DE/mobweb_newslettersignupcoupon.csv app/locale/de_AT/mobweb_newslettersignupcoupon.csv
+
+app/etc/modules/MobWeb_NewsletterSignupCoupon.xml app/etc/modules/MobWeb_NewsletterSignupCoupon.xml
+
+# Clear the cache
+@shell   rm -rf $PROJECT/var/cache/* && echo "Magento Cache cleared"
